@@ -1,0 +1,30 @@
+@import "../../theme/index";
+
+.default {
+  font-size: $font-size-default;
+}
+
+.bold {
+  @extend .default;
+  font-weight: bold;
+}
+
+.italic {
+  @extend .default;
+  font-style: italic;
+}
+
+.header {
+  @extend .default;
+  @include typography_header;
+}
+
+.subheader {
+  @extend .default;
+  @include typography_subheader;
+}
+
+.subsubheader {
+  @extend .default;
+  @include typography_subsubheader
+}

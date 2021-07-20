@@ -1,0 +1,40 @@
+@import "../../theme/index";
+
+.default {
+  @include shadow;
+  border-radius: $border-radius;
+  background-color: $color-cards;
+  width: 100%;
+  position: relative;
+  padding: $spacing-large;
+  margin: $space-between-cards;
+  box-sizing: border-box;
+
+  @include for-tablet-portrait-up {
+    width: $tablet-portrait-width;
+  }
+
+  @include for-tablet-landscape-up {
+    width: $tablet-landscape-width;
+  }
+
+  @include for-desktop-up {
+    width: $desktop-width;
+  }
+
+  @include for-big-desktop-up {
+    width: $big-desktop-width;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .line {
+    border: 1px solid $color-foreground;
+    width: 20%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+  }
+}

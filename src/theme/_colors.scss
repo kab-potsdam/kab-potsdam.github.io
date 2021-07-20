@@ -1,0 +1,5 @@
+$color-background: #eee;
+$color-cards: #fff;
+$color-foreground: #000;
+$color-friendly: rgb(106, 148, 97);
+$color-light-foreground: adjust-color($color: $color-foreground, $lightness: 30%);

@@ -1,0 +1,14 @@
+@import "../../theme/index";
+
+.default {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: $spacing-large;
+
+    .element {
+        margin-left: $spacing-medium;
+        margin-right: $spacing-medium;
+        color: $color-light-foreground;
+    }
+}

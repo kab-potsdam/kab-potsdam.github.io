@@ -1,0 +1,9 @@
+@import "../../theme/index";
+
+.text {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    display: block;
+  }
+}

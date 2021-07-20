@@ -1,0 +1,36 @@
+@import "../../theme/index";
+
+.default {
+  @include shadow;
+  align-items: center;
+  background-color: $color-cards;
+  border: none;
+  border-radius: 6px;
+  color: $color-foreground;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: $spacing-small;
+  transition: box-shadow 0.3s;
+
+  &:active {
+    @include flat-shadow;
+  }
+}
+
+.flat {
+  @extend .default;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  transition: color 1s;
+  background-color: rgba(0,0,0,0);
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

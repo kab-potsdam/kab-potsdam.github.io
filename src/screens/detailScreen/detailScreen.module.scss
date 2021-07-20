@@ -1,0 +1,50 @@
+@import "../../theme";
+
+.default {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: $spacing-large;
+    padding-bottom: $spacing-large;
+    margin-top: $spacing-huge;
+    margin-bottom: $spacing-huge;
+
+    /* Safari, Opera, and Chrome */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    /* Internet Explorer 10 */
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: flex-start;
+
+        @include for-tablet-portrait-up {
+            width: 600px;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 900px;
+        }
+
+        @include for-desktop-up {
+            width: 1100px;
+        }
+
+        @include for-big-desktop-up {
+            width: 1500px;
+        }
+    }
+}

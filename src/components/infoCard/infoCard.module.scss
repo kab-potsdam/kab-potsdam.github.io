@@ -1,0 +1,120 @@
+@import "../../theme/index";
+
+.default {
+  @include flat-shadow;
+  border-radius: $border-radius $border-radius 0 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-cards;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
+  width: 100%;
+  border-bottom: 2px solid $color-friendly;
+
+  @include for-tablet-portrait-up {
+  }
+
+  @include for-tablet-landscape-up {
+    flex-direction: column;
+    .element {
+      padding: none;
+    }
+  }
+
+  @include for-desktop-up {
+  }
+
+  @include for-big-desktop-up {
+  }
+
+  .header {
+    border-radius: inherit;
+    background: $color-friendly;
+    span {
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .arrow {
+      background-color: #000;
+    }
+    width: 100%;
+    padding: $spacing-medium;
+    transition: background-color 0.5s ease;
+  }
+
+  .data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $spacing-medium;
+
+    .element {
+      padding-top: $spacing-medium;
+      padding-bottom: $spacing-medium;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    }
+
+    .address {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+      @include content;
+    }
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .map {
+    max-width: 80%;
+    overflow: hidden;
+  }
+}
+
+.small {
+  @include flat-shadow;
+  background-color: $color-cards;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
+  display: flex;
+
+  .header {
+    border-radius: inherit;
+    transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: $spacing-medium;
+  }
+  .details {
+    display: none;
+  }
+  .map {
+    display: none;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icon {
+    margin-right: $spacing-medium;
+  }
+}

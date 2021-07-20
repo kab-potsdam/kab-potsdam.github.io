@@ -1,0 +1,10 @@
+@import "../../theme/index";
+
+.default {
+  @include square($icon-width);
+}
+
+.circle {
+  @extend .default;
+  border-radius: 50%;
+}
