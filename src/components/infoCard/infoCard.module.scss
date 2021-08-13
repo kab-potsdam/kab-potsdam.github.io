@@ -7,26 +7,19 @@
   flex-direction: column;
   background-color: $color-cards;
   overflow: hidden;
-  box-sizing: border-box;
   margin-top: $spacing-medium;
   margin-bottom: $spacing-medium;
-  width: 100%;
+  box-sizing: border-box;
   border-bottom: 2px solid $color-friendly;
-
-  @include for-tablet-portrait-up {
-  }
 
   @include for-tablet-landscape-up {
     flex-direction: column;
     .element {
       padding: none;
     }
-  }
-
-  @include for-desktop-up {
-  }
-
-  @include for-big-desktop-up {
+    .data {
+      flex-direction: row;
+    }
   }
 
   .header {
@@ -39,16 +32,17 @@
     .arrow {
       background-color: #000;
     }
-    width: 100%;
     padding: $spacing-medium;
     transition: background-color 0.5s ease;
+    box-sizing: border-box;
   }
 
   .data {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: $spacing-medium;
+    box-sizing: border-box;
 
     .element {
       padding-top: $spacing-medium;
@@ -79,8 +73,10 @@
   }
 
   .map {
-    max-width: 80%;
+    display: none;
+    max-width: 100%;
     overflow: hidden;
+    box-sizing: border-box;
   }
 }
 
@@ -93,6 +89,12 @@
   margin-bottom: $spacing-medium;
   display: flex;
 
+  @include for-tablet-landscape-up {
+    .icon {
+      margin-right: $spacing-huge;
+    }
+  }
+
   .header {
     border-radius: inherit;
     transition: background-color 0.5s ease;
@@ -102,10 +104,7 @@
     width: 100%;
     padding: $spacing-medium;
   }
-  .details {
-    display: none;
-  }
-  .map {
+  .data {
     display: none;
   }
 
@@ -115,6 +114,6 @@
   }
 
   .icon {
-    margin-right: $spacing-medium;
+    margin-right: $spacing-small;
   }
 }

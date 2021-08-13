@@ -1,6 +1,7 @@
 import hospital from "./hospital.jpg";
 import pediatrician from "./pediatrician.jpg";
 import telephone from "./telephone.jpg";
+import oncall from "./oncall.jpg";
 
 export const categories = [
   {
@@ -29,7 +30,7 @@ export const categories = [
     title: "Bereitschaft",
     path: "/bereitschaftsdienst",
     description: "",
-    src: pediatrician,
+    src: oncall,
   }
 ];
 
